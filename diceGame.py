@@ -36,7 +36,7 @@ for roll in range(0, inputDiceRollsNumber):
     # Calculate dice total after each roll
     diceRollTotal = diceRollOne + diceRollTwo
     # Store number of times snake eyes was rolled
-    if diceRollTotal == 2:
+    if diceRollTotal == SNAKE_EYES:
         snakeEyeTimes += 1
     # Print outputs
     print("---------------------------")
@@ -66,7 +66,7 @@ while boxCarTimes < 1:
     # Calculate dice total after each roll
     diceRollTotal = diceRollOne + diceRollTwo
     # Check to see if dice rolls reached box cars, end game by updating boxCarTimes to 1 for when loop finishes.
-    if diceRollTotal == 12:
+    if diceRollTotal == BOXCARS:
         boxCarTimes += 1
     # Print outputs of the rolls, dice, and sum.
     print("---------------------------")
