@@ -5,6 +5,8 @@ Description: Program which prompts user for file name, reads the file
 name in, line by line iterates through the file and then decrypts the text, finally displaying the art and asking the
 user if they wish to read more files, until blank line is entered
 """
+
+# CONSTANT DECLARATION
 DISTANCE = 1
 
 # Variable declaration
@@ -47,5 +49,6 @@ while fileName != "":
     # if the user enters N or No, move to asking the user for the next file name.
     elif userAnswer == 'N' or userAnswer == 'NO':
         fileName = input("Enter the next file name to read, or just Enter to quit: ")
+
 # Say goodbye to the user.
 print("All done! Goodbye!")
