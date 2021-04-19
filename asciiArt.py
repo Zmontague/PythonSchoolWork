@@ -19,7 +19,7 @@ while fileName != "":
     # Open file with the file name the user provided
     f = open(fileName, 'r')
     # Read the file line by line and store in variable
-    fileText = f.readlines()
+    fileText = f.readline()
     # Close the file when finished using it
     f.close()
 
@@ -34,8 +34,9 @@ while fileName != "":
 
     # Ask the user if they want to save the file
     userAnswer = input("Would you like to save the file? (Y/N) ")
-    # If the user enters Y, move to asking the user for the file name
-    if (userAnswer == 'Y'):
+    # If the user enters Y or YES, move to asking the user for the file name
+    userAnswer = userAnswer.upper()
+    if userAnswer == 'Y' or userAnswer == 'YES':
         saveFileName = input("Enter the new file name: ")
         # open/create the file
         f = open(saveFileName, 'x')
@@ -43,5 +44,8 @@ while fileName != "":
         f.write(decryptedText)
         # finished with the file, close it now
         f.close()
-
-
+    # if the user enters N or No, move to asking the user for the next file name.
+    elif userAnswer == 'N' or userAnswer == 'NO':
+        fileName = input("Enter the next file name to read, or just Enter to quit: ")
+# Say goodbye to the user.
+print("All done! Goodbye!")
