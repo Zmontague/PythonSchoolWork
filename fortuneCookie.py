@@ -21,13 +21,11 @@ fortunes = []
 usedFortunesAndMagicNums = {}
 
 # Open provided fortune file
-f = open(fileName, 'r')
-# Read file into list
-for line in f:
-    fortunes.append(line)
+with open(fileName, 'r') as f:
+    # Read file into list
+    for line in f:
+        fortunes.append(line)
 
-# close file
-f.close()
 
 # Begin looping and randomly selecting magic numbers and fortunes and testing if the user wishes to continue getting
 # fortunes.
